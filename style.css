@@ -1,0 +1,492 @@
+/* Define CSS variables for consistent theming */
+:root {
+    --primary-color: #81f7ff;
+    --secondary-color: #00ff9e;
+    --background-color: #121212;
+    --text-color: #d0d0d0;
+    --dark-mode-bg: #0e0e0e;
+}
+
+/* I update the body background to use Tanjiro.jpg */
+body {
+    font-family: 'Roboto Mono', monospace; /* I chose a modern monospace font for a tech-inspired look. */
+    margin: 0;
+    padding: 0;
+    color: var(--text-color); /* Updated to use CSS variable for text color. */
+    background: url("Tanjiro.jpg") no-repeat center center fixed; /* I set the background image to cover the viewport and remain fixed during scrolling. */
+    background-size: cover; /* Ensures the background image covers the entire viewport. */
+    display: flex; /* Enables flex layout for main content and footer positioning */
+    flex-direction: column; /* Stacks main content and footer vertically */
+}
+
+/* I design the navigation bar to appear as a sleek, horizontal interface */
+nav {
+    display: flex; /* Flexbox ensures the navigation items are aligned in a horizontal row. */
+    justify-content: center; /* I center the navigation bar on the page. */
+    align-items: center; /* I vertically align the items for balance. */
+    background: #1a1a1a; /* A dark background matches the sci-fi theme. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* I add subtle shadows to create depth. */
+    padding: 1rem 0; /* Spacing above and below the navigation bar for clean visuals. */
+    position: fixed; /* I fix the navigation at the top for easy access during scrolling. */
+    top: 0; /* Positioning the navigation at the top of the page. */
+    width: 100%; /* Ensures the navigation spans the entire width of the page. */
+    z-index: 1000; /* I ensure the navigation always stays above other elements. */
+}
+
+/* I create a futuristic button style for the navigation links */
+.nav-links {
+    display: flex; /* I use Flexbox for horizontal spacing. */
+    gap: 1.5rem; /* I add space between the buttons to keep them distinct. */
+    list-style: none; /* I remove default bullet points for a cleaner look. */
+    padding: 0; /* Removing unwanted padding. */
+    margin: 0; /* Resetting margin to streamline the design. */
+}
+
+.nav-links li a {
+    text-decoration: none; /* I remove underlines for a clean, modern appearance. */
+    color: var(--primary-color); /* Updated to use CSS variable for text color. */
+    font-size: 1.1rem; /* I adjust the font size for better readability. */
+    font-weight: bold; /* The text stands out more with bold weight. */
+    padding: 0.6rem 1.2rem; /* I use padding to add space inside each button. */
+    border: 2px solid #3a3a3a; /* Subtle borders give the buttons structure. */
+    border-radius: 10px; /* Rounded corners add a futuristic touch. */
+    background: linear-gradient(90deg, #121212, #1c1c1c); /* The gradient creates a metallic, sleek effect. */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transitions give the buttons interactivity. */
+}
+
+.nav-links li a:hover {
+    color: var(--secondary-color); /* Updated to use CSS variable for hover text color. */
+    transform: scale(1.1); /* Slight enlargement adds interactivity and emphasis. */
+    box-shadow: 0 0 20px 5px var(--secondary-color); /* Updated to use CSS variable for hover shadow color. */
+}
+
+/* I style the sections for a dark, futuristic design */
+section {
+    position: relative;
+    background: var(--background-color); /* Fallback for browsers without background images */
+    color: var(--text-color);
+    padding: 3rem;
+    margin: 5rem auto;
+    border-left: 5px solid var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    max-width: 900px;
+    animation: fadeIn 1.2s ease-in-out;
+    overflow: hidden; /* Ensures content stays within the section */
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for text readability */
+    z-index: -1; /* Ensures it stays behind the text */
+}
+
+/* I add section-specific background images */
+#about {
+    background: url("about.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+#skills {
+    background: url("skills.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+#education {
+    background: url("education.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+#projects {
+    background: url("projects.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+#achievements {
+    background: url("achievements.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+#interests {
+    background: url("interests.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+/* I define the fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Sections start off invisible. */
+        transform: translateY(20px); /* I start sections slightly below their final position. */
+    }
+    to {
+        opacity: 1; /* Sections become fully visible. */
+        transform: translateY(0); /* Sections settle into their natural position. */
+    }
+}
+
+/* I style pictures inside sections */
+section img {
+    max-width: 100%; /* Makes the image responsive for smaller screens. */
+    height: auto; /* Maintains the aspect ratio. */
+    border-radius: 10px; /* Matches the overall rounded styling. */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Adds depth to the image. */
+    margin-bottom: 1rem; /* Adds spacing below images. */
+}
+
+/* I design the footer to echo the sci-fi theme */
+footer {
+    position: relative; /* Ensures it doesn't overlap body content */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #1a1a1a; /* Dark background for contrast */
+    color: var(--text-color); /* Ensures text is visible on dark background */
+    text-align: center;
+    padding: 1rem;
+    border-top: 2px solid #3a3a3a; /* Subtle border for separation */
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.7); /* Adds depth */
+}
+
+/* I style the modal for the CV preview to match the sci-fi theme */
+.cv-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed to cover the viewport */
+    top: 50%; /* Centers the modal vertically */
+    left: 50%; /* Centers the modal horizontally */
+    transform: translate(-50%, -50%); /* Ensures perfect centering */
+    background: #1a1a1a; /* Matches the site's theme */
+    color: var(--text-color); /* Ensures text is visible */
+    padding: 2rem; /* Adds spacing inside the modal */
+    border-radius: 10px; /* Rounded edges for a polished look */
+    max-width: 80%; /* Larger width for better visibility */
+    max-height: 90%; /* Limits height to prevent overflow */
+    overflow-y: auto; /* Enables scrolling for larger content */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Adds depth */
+    z-index: 1002; /* Ensures it appears above other elements */
+}
+
+.cv-modal.show-modal {
+    display: flex; /* Displays the modal when active */
+    flex-direction: column; /* Aligns modal content vertically */
+}
+
+.cv-modal iframe {
+    width: 100%; /* Ensures the iframe spans the modal width */
+    height: 80vh; /* Makes the iframe taller for better visibility */
+    border: none; /* Removes the default iframe border */
+}
+
+/* I style the contact form pop-up */
+.contact-popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #1a1a1a;
+    color: var(--text-color);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+    z-index: 1001;
+    width: 90%;
+    max-width: 500px;
+}
+
+.contact-popup.show-popup {
+    display: flex; /* Display the pop-up when active */
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-popup form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.contact-popup form input,
+.contact-popup form textarea,
+.contact-popup form button {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+    background: var(--background-color);
+    color: var(--text-color);
+    border: 2px solid #3a3a3a;
+    border-radius: 5px;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.contact-popup form button {
+    background: var(--secondary-color);
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-popup form button:hover {
+    background: var(--primary-color);
+}
+
+/* I style the contact link inside sections */
+.contact-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--secondary-color);
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: var(--primary-color);
+}
+
+/* I style the contact form pop-up for interactivity */
+.contact-popup {
+    display: none; /* The contact form is hidden by default. */
+    position: fixed; /* Positions the form in the middle of the screen. */
+    top: 50%; /* Centers the form vertically. */
+    left: 50%; /* Centers the form horizontally. */
+    transform: translate(-50%, -50%); /* Ensures perfect centering. */
+    background: #1a1a1a; /* Matches the site's sci-fi theme. */
+    color: var(--text-color); /* Updated to use CSS variable for text color. */
+    padding: 2rem; /* Adds comfortable spacing inside the form. */
+    border-radius: 15px; /* Rounded corners give the form an elegant touch. */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Shadows enhance depth. */
+    z-index: 1001; /* Ensures the form is above other elements. */
+}
+
+.contact-popup.show-popup {
+    display: flex; /* Displays the contact form when active. */
+    flex-direction: column; /* Aligns form elements vertically. */
+    align-items: center; /* Centers elements inside the form. */
+}
+
+.contact-popup form {
+    display: flex; /* Aligns inputs and buttons vertically. */
+    flex-direction: column; /* Stacks input fields and buttons. */
+    gap: 1rem; /* Adds spacing between form elements. */
+    width: 100%; /* Form spans the full width of the pop-up container. */
+}
+
+/* Styling for inputs, select dropdowns, and buttons inside the contact form */
+.contact-popup form input,
+.contact-popup form textarea,
+.contact-popup form select,
+.contact-popup form button {
+    font-family: 'Roboto Mono', monospace; /* Maintains font consistency. */
+    font-size: 1rem; /* Optimized text size for readability. */
+    background: var(--background-color); /* Updated to use CSS variable for background color. */
+    color: var(--text-color); /* Updated to use CSS variable for text color. */
+    border: 2px solid #3a3a3a; /* Subtle borders provide structure. */
+    border-radius: 5px; /* Rounded corners match the elegant design. */
+    padding: 0.5rem; /* Adds comfortable padding inside input fields. */
+    width: 100%; /* Fields span the full width of the form. */
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions on focus. */
+}
+
+.contact-popup form input:focus,
+.contact-popup form textarea:focus,
+.contact-popup form select:focus {
+    background: #1e1e1e; /* Highlights the focused input. */
+    box-shadow: 0 0 10px var(--secondary-color); /* Updated to use CSS variable for focus shadow color. */
+    outline: none; /* Removes the default focus outline for a cleaner look. */
+}
+
+.contact-popup form button {
+    background: linear-gradient(90deg, #121212, #1c1c1c); /* Gradient gives the button a metallic effect. */
+    color: var(--primary-color); /* Updated to use CSS variable for text color. */
+    font-weight: bold; /* Emphasizes the button text. */
+    cursor: pointer; /* Indicates interactivity. */
+    padding: 0.5rem 1rem; /* Adds spacing inside the button. */
+    border-radius: 5px; /* Matches other rounded elements. */
+    border: none; /* Removes default borders. */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover and interaction effects. */
+}
+
+.contact-popup form button:hover {
+    background: var(--secondary-color); /* Updated to use CSS variable for hover background color. */
+    box-shadow: 0 0 10px var(--secondary-color); /* Updated to use CSS variable for hover shadow color. */
+    transform: scale(1.05); /* Slight enlargement on hover for interactivity. */
+}
+
+/* Styling for images in sections */
+section img {
+    max-width: 100%; /* Makes images responsive. */
+    height: auto; /* Maintains the original aspect ratio. */
+    border-radius: 10px; /* Adds smooth rounded corners to images. */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Adds depth to the images. */
+    margin-bottom: 1rem; /* Adds space below images. */
+}
+
+/* Enhancing section headings with glowing effects */
+h2 {
+    font-family: 'Roboto Mono', monospace; /* Aligns with the site's font style. */
+    color: var(--primary-color); /* Updated to use CSS variable for text color. */
+    text-shadow: 0 0 10px rgba(129, 247, 255, 0.8); /* Subtle glowing effect for emphasis. */
+    margin-bottom: 1.5rem; /* Adds space below headings. */
+    text-align: center; /* Centers section headings for a balanced layout. */
+}
+
+/* Custom cursor for interactivity */
+.custom-cursor {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: var(--primary-color); /* Updated to use CSS variable for background color. */
+    border-radius: 50%; /* Circular shape complements the design. */
+    box-shadow: 0 0 15px 5px var(--primary-color); /* Updated to use CSS variable for shadow color. */
+    pointer-events: none; /* Prevents the cursor from interfering with clicks. */
+    transition: transform 0.2s ease; /* Smooth movement for better engagement. */
+}
+
+/* I hide sections by default */
+.hidden {
+    display: none;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* I reveal sections when active */
+.section.active {
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* I style the sections container for better layout */
+.sections-container {
+    margin-top: 5rem; /* Adds spacing below the navigation bar */
+    position: relative;
+    z-index: 1;
+}
+
+/* I style the art reel container */
+.art-reel {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for contrast */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    margin: 2rem auto;
+    max-width: 90%;
+    align-items: center;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.art-reel.hidden {
+    display: none; /* Hides the art reel when not on the landing page */
+}
+
+/* I style individual art items in the reel */
+.art-reel img {
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.art-reel img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* I style the section-specific contact forms */
+.contact-form {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for contrast */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+    color: var(--text-color);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #3a3a3a;
+    border-radius: 5px;
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+.contact-form button {
+    background: var(--secondary-color);
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: var(--primary-color);
+}
+
+/* I style the main content to push the footer to the bottom */
+main {
+    flex: 1; /* Ensures the main content pushes the footer to the bottom */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stacks the navigation links vertically on smaller screens. */
+    }
+    .nav-links {
+        gap: 1rem; /* Reduces spacing for smaller viewports. */
+    }
+    section {
+        padding: 2rem; /* Reduces padding for better responsiveness. */
+    }
+    .contact-popup {
+        padding: 1.5rem; /* Adjusts form padding for smaller screens. */
+    }
+    h2 {
+        font-size: 1.5rem; /* Scales down the heading size for mobile devices. */
+    }
+    .art-reel img {
+        height: 150px;
+    }
+}
+
+/* Add responsive styles for smaller devices */
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+    .nav-links {
+        gap: 0.5rem;
+    }
+    section {
+        padding: 1.5rem;
+        margin: 2rem auto;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    footer {
+        font-size: 0.8rem;
+    }
+}

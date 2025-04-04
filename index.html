@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thembelani's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Thembelani's Portfolio</h1>
+        <p class="tagline">Tech Meets Manga Creativity</p>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#" data-section="about" aria-label="About Section">About</a></li>
+                <li><a href="#" data-section="skills" aria-label="Skills Section">Skills</a></li>
+                <li><a href="#" data-section="education" aria-label="Education Section">Education</a></li>
+                <li><a href="#" data-section="projects" aria-label="Projects Section">Projects</a></li>
+                <li><a href="#" data-section="achievements" aria-label="Achievements Section">Achievements</a></li>
+                <li><a href="#" data-section="interests" aria-label="Interests Section">Interests</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="art-reel">
+            <img src="art1.jpg" alt="Art 1">
+            <img src="art2.jpg" alt="Art 2">
+            <img src="art3.jpg" alt="Art 3">
+            <img src="art4.jpg" alt="Art 4">
+            <img src="art5.jpg" alt="Art 5">
+        </div>
+
+        <div class="sections-container">
+            <section id="about" class="section hidden" style="background-color: #f0f8ff;">
+                <h2>About Me</h2>
+                <p>Hi! I'm Thembelani, a passionate coder and creative thinker.</p>
+                <a href="#" class="contact-link" data-section="About">Ask me more</a>
+            </section>
+
+            <section id="skills" class="section hidden">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML, CSS, JavaScript (Vanilla + DOM manipulation)</li>
+                    <li>Artificial Intelligence (Python, machine learning frameworks)</li>
+                    <li>Embedded Systems (C++)</li>
+                    <li>Responsive Web Design</li>
+                    <li>Game Design & Board Game Development (Gamification, Logic Puzzles)</li>
+                    <li>Creative Writing (Comics, Character Development, Story Arcs)</li>
+                    <li>UI/UX Design Thinking</li>
+                    <li>App Concept Design (Educational + Entertainment)</li>
+                    <li>Project Management (Startups, Product Prototyping)</li>
+                </ul>
+                <a href="#" class="contact-link" data-section="Skills">If you have any more questions, ask here</a>
+            </section>
+
+            <section id="education" class="section hidden">
+                <h2>Education</h2>
+                <p>
+                    Bachelor's in Computer Science with a specialization in Artificial Intelligence. My academic focus included neural networks, natural language processing, and the ethics of AI.
+                </p>
+                <p>
+                    Through the PPL (Programme for Professional Learning), I rekindled my curiosity in scientific exploration and merged it with entrepreneurial grit. I’ve also pursued ongoing learning in open-source development and educational technology.
+                </p>
+                <button class="cv-preview-btn">Preview CV</button>
+                <a href="#" class="contact-link" data-section="Education">If you have any more questions, ask here</a>
+            </section>
+
+            <section id="projects" class="section hidden">
+                <h2>Projects</h2>
+                <figure>
+                    <img src="project1-manga.jpg" alt="Manga-style Project 1 illustration">
+                    <figcaption>
+                        <a href="https://github.com/your-repo/project1" target="_blank">TaskFlow</a>
+                        - A clean task management web app built with vanilla JS, styled for mobile and desktop.
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="project2-manga.jpg" alt="Manga-style Project 2 illustration">
+                    <figcaption>
+                        <a href="https://github.com/your-repo/project2" target="_blank">MangaFolio</a>
+                        - A dynamic manga-themed portfolio with CSS animations, page transitions, and custom cursor.
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="project3-manga.jpg" alt="Coding board game illustration">
+                    <figcaption>
+                        <a href="#">CodeVerse (Board Game)</a>
+                        - A no-computer-needed board game that teaches coding logic to kids using cards, challenges, and time-based puzzles.
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="project4-manga.jpg" alt="Comic App Screenshot">
+                    <figcaption>
+                        <a href="#">EduManga App (In Dev)</a>
+                        - A hybrid platform for educational + entertainment comics, featuring QR/NFC integration, AI feedback, and subscription access for learners and schools.
+                    </figcaption>
+                </figure>
+                <a href="#" class="contact-link" data-section="Projects">If you have any more questions, ask here</a>
+            </section>
+
+            <section id="achievements" class="section hidden">
+                <h2>Achievements</h2>
+                <p>
+                    📺 Featured on SABC for my comic book series that bridges African folklore and superhero storytelling.
+                </p>
+                <p>
+                    🎥 Producing my first short film, merging animation, drama, and Afro-futuristic themes.
+                </p>
+                <p>
+                    🚀 Founded two creative-tech startups: one in the educational gaming space and another as a comic distribution platform for creators across Africa.
+                </p>
+                <p>
+                    🎓 Working on partnerships with institutions to help over 1.2 million NSFAS-funded students in South Africa gain access to textbooks, programming courses, and comics through our app.
+                </p>
+                <a href="#" class="contact-link" data-section="Achievements">If you have any more questions, ask here</a>
+            </section>
+
+            <section id="interests" class="section hidden">
+                <h2>Interests</h2>
+                <p>
+                    I’m passionate about blending technology with storytelling. I love Artificial Intelligence, embedded systems, and education tech. On the creative side, I write manga and develop complex characters like Krampus Claw, Zama Godwana, and the fire-and-ice duo Morty & Mal.
+                </p>
+                <p>
+                    I’m also deeply interested in using comics to teach — whether it’s coding logic, resilience, or history. I follow trends in game-based learning, Afro-futurism, animation, and open-source culture.
+                </p>
+                <p>
+                    If I'm not coding or designing, you’ll probably find me writing story arcs, drawing concept art, or building something unexpected.
+                </p>
+                <a href="#" class="contact-link" data-section="Interests">If you have any more questions, ask here</a>
+            </section>
+        </div>
+    </main>
+
+    <div class="contact-popup">
+        <button class="close-form">X</button>
+        <form id="contact-form">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="3" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <footer>
+        <p id="visitor-count"></p>
+        <button id="theme-toggle" aria-label="Toggle Dark Mode">Dark Mode</button>
+        <button id="music-toggle" aria-label="Toggle Background Music">Play Music</button>
+        <p>&copy; 2025 Thembelani. All rights reserved.</p>
+    </footer>
+
+    <audio id="background-music" src="background-music.mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="cv-modal">
+        <div class="cv-content">
+            <button class="close-modal">X</button>
+            <iframe src="./My CV.pdf" title="CV Preview"></iframe>
+            <a href="./My CV.pdf" download>Download My CV</a>
+        </div>
+    </div>
+
+    <div class="custom-cursor"></div>
+</body>
+</html>
